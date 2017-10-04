@@ -1,0 +1,17 @@
+<form action="/figures/<%="#{@figure.id}"%>" method="POST">
+    <%= @figure.name %>
+    <input type="text" name="figure[name]" id="figure_name" value=""> <br>
+
+
+    <%Title.all.each do |title|%>
+    <input type="checkbox" name="figure[title_ids][]" value="<%=title.name%>" id="<%="title_#{title.id}"%>"><%=title.name%></input>
+    <%end%>
+
+    <input type="text" name="landmark[name]" id="new_landmark" value=""> <br>
+
+
+      <br></br>
+
+   <input type="submit" value="Edit Figure">
+
+</form>

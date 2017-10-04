@@ -1,1 +1,3 @@
-hi
+<% @figures.each do |figure| %>
+<a href=<%="figures/#{figure.slug}"%>><%= "#{figure.name}" %></a><br>
+<% end %>
